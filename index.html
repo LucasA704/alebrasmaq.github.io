@@ -58,31 +58,30 @@ body { font-family: Arial, sans-serif; background: #f1f5f9; }
 .conf li { margin: 10px 0; font-size: 16px; }
 
 /* CARDS DE SERVIÇOS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-}
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s ease forwards;
-}
-.card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-.card img { width: 100%; max-width: 140px; height: auto; margin-bottom: 15px; }
-.card h3 { margin-bottom: 10px; color: #0f172a; }
-.card p { color: #475569; font-size: 15px; }
-.card:nth-child(1){animation-delay:0.1s;}
-.card:nth-child(2){animation-delay:0.2s;}
-.card:nth-child(3){animation-delay:0.3s;}
-.card:nth-child(4){animation-delay:0.4s;}
+<!-- CARDS DE SERVIÇOS -->
+<section class="cards">
+  <div class="card">
+    <img src="https://drive.google.com/uc?export=view&id=19XDpP1q5vilIVl9iHTZYElJ1Fvkinaoz" alt="Lava e Seca">
+    <h3>Lava e Seca</h3>
+    <p>Diagnóstico preciso e reparo profissional.</p>
+  </div>
+  <div class="card">
+    <img src="https://drive.google.com/uc?export=view&id=1_G-8-__5UPmqpYr74jQSHNi5qn_fEeYR" alt="Micro-ondas">
+    <h3>Micro-ondas</h3>
+    <p>Reparo seguro e manutenção especializada.</p>
+  </div>
+  <div class="card">
+    <img src="https://drive.google.com/uc?export=view&id=1MvS6mayBNeNhqIsZ2EN86ntSAB4KaM2H" alt="Geladeira">
+    <h3>Geladeira</h3>
+    <p>Conserto e manutenção preventiva para melhor desempenho.</p>
+  </div>
+  <div class="card">
+    <img src="https://drive.google.com/uc?export=view&id=1sR1m7GWnfrBTSCXNEgHTfTJ5X1Gl-b34" alt="Lavadora">
+    <h3>Lavadora</h3>
+    <p>Problemas de centrifugação, vazamento e não liga.</p>
+  </div>
+</section>
+
 
 /* SEU ELETRODOMÉSTICO */
 .service-box {
