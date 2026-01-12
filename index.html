@@ -111,19 +111,46 @@ body { font-family: Arial, sans-serif; background: #f1f5f9; }
 }
 .service-box .cta a:hover { transform: scale(1.06); box-shadow: 0 15px 30px rgba(34,197,94,0.45); }
 
+/* HERO FINAL / ESCURO */
+.hero-final {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 16px;
+  margin: 50px 20px;
+}
+.hero-final h2 { font-size: 30px; margin-bottom: 20px; }
+.hero-final p { font-size: 18px; max-width: 700px; margin: 0 auto 25px; opacity: 0.9; }
+.hero-final .buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.hero-final a {
+  display: inline-block;
+  padding: 16px 34px;
+  font-weight: bold;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-final .btn-whatsapp { background: #22c55e; color: #022c22; }
+.hero-final .btn-whatsapp:hover { transform: scale(1.07); box-shadow: 0 15px 30px rgba(34,197,94,0.45); }
+.hero-final .btn-instagram { background: #ffffff; color: #0f172a; }
+.hero-final .btn-instagram:hover { transform: scale(1.07); box-shadow: 0 15px 30px rgba(255,255,255,0.35); }
+
 /* ANIMAÇÃO */
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 /* RESPONSIVO */
 @media(max-width:768px){
-.hero h1{font-size:28px;}
-.hero p{font-size:16px;}
+.hero h1, .hero-final h2{font-size:28px;}
+.hero p, .hero-final p{font-size:16px;}
 .hero img{max-width:130px;}
-.hero .buttons a{width:100%;max-width:320px;text-align:center;}
+.hero .buttons a, .hero-final .buttons a{width:100%;max-width:320px;text-align:center;}
 .conf{padding:30px 15px;}
 .cards{grid-template-columns:1fr;padding:30px 15px;}
 .card{width:100%;max-width:320px;margin:0 auto;}
 .service-box{padding:30px 15px;}
+.hero-final{margin:30px 15px;}
 }
 </style>
 </head>
@@ -185,6 +212,16 @@ body { font-family: Arial, sans-serif; background: #f1f5f9; }
   <p class="location">Atendimento na <strong>Zona Leste</strong> e <strong>ABC Paulista</strong>.</p>
   <div class="cta">
     <a href="https://wa.me/5511987790889" target="_blank">📲 Atendimento pelo WhatsApp</a>
+  </div>
+</section>
+
+<!-- HERO FINAL / ESCURO -->
+<section class="hero-final">
+  <h2>Entre em contato agora mesmo!</h2>
+  <p>Solicite seu atendimento via WhatsApp ou veja nossos serviços no Instagram.</p>
+  <div class="buttons">
+    <a class="btn-whatsapp" href="https://wa.me/5511987790889" target="_blank">WhatsApp</a>
+    <a class="btn-instagram" href="https://www.instagram.com/alebrasmaqassistenciatecnica/" target="_blank">Instagram</a>
   </div>
 </section>
 
