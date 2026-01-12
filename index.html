@@ -6,17 +6,8 @@
 <title>Alebrasmaq Assistência Técnica</title>
 
 <style>
-/* GLOBAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f1f5f9;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f1f5f9; }
 
 /* HERO / HEADER */
 .hero {
@@ -29,7 +20,6 @@ body {
   transform: translateY(20px);
   animation: fadeUp 0.8s ease forwards;
 }
-
 .hero img {
   max-width: 160px;
   width: 100%;
@@ -37,26 +27,9 @@ body {
   display: block;
   margin: 0 auto 20px;
 }
-
-.hero h1 {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  opacity: 0.9;
-}
-
-.hero .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
+.hero h1 { font-size: 38px; margin-bottom: 15px; }
+.hero p { font-size: 18px; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+.hero .buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 .hero a {
   display: inline-block;
   padding: 16px 34px;
@@ -66,26 +39,10 @@ body {
   font-size: 18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.hero .btn-whatsapp {
-  background: #22c55e;
-  color: #022c22;
-}
-
-.hero .btn-whatsapp:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 30px rgba(34,197,94,0.45);
-}
-
-.hero .btn-instagram {
-  background: #ffffff;
-  color: #0f172a;
-}
-
-.hero .btn-instagram:hover {
-  transform: scale(1.07);
-  box-shadow: 0 15px 30px rgba(255,255,255,0.35);
-}
+.hero .btn-whatsapp { background: #22c55e; color: #022c22; }
+.hero .btn-whatsapp:hover { transform: scale(1.07); box-shadow: 0 15px 30px rgba(34,197,94,0.45); }
+.hero .btn-instagram { background: #ffffff; color: #0f172a; }
+.hero .btn-instagram:hover { transform: scale(1.07); box-shadow: 0 15px 30px rgba(255,255,255,0.35); }
 
 /* POR QUE ESCOLHER MEU SERVIÇO */
 .conf {
@@ -96,22 +53,9 @@ body {
   max-width: 1000px;
   margin: 40px auto;
 }
-
-.conf h2 {
-  margin-bottom: 20px;
-  color: #0f172a;
-  font-size: 28px;
-}
-
-.conf ul {
-  list-style: none;
-  padding: 0;
-}
-
-.conf li {
-  margin: 10px 0;
-  font-size: 16px;
-}
+.conf h2 { margin-bottom: 20px; color: #0f172a; font-size: 28px; }
+.conf ul { list-style: none; padding: 0; }
+.conf li { margin: 10px 0; font-size: 16px; }
 
 /* CARDS DE SERVIÇOS */
 .cards {
@@ -120,7 +64,6 @@ body {
   gap: 20px;
   padding: 40px 20px;
 }
-
 .card {
   background: white;
   border-radius: 12px;
@@ -132,33 +75,14 @@ body {
   transform: translateY(20px);
   animation: fadeUp 0.6s ease forwards;
 }
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.card img {
-  width: 100%;
-  max-width: 140px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  color: #0f172a;
-}
-
-.card p {
-  color: #475569;
-  font-size: 15px;
-}
-
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+.card img { width: 100%; max-width: 140px; height: auto; margin-bottom: 15px; }
+.card h3 { margin-bottom: 10px; color: #0f172a; }
+.card p { color: #475569; font-size: 15px; }
+.card:nth-child(1){animation-delay:0.1s;}
+.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.3s;}
+.card:nth-child(4){animation-delay:0.4s;}
 
 /* SEU ELETRODOMÉSTICO */
 .service-box {
@@ -168,42 +92,12 @@ body {
   max-width: 950px;
   margin: 50px auto;
 }
-
-.service-box h2 {
-  color: #0f172a;
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.service-box p {
-  color: #334155;
-  line-height: 1.7;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-.service-box .highlight {
-  font-weight: bold;
-  color: #0f172a;
-}
-
-.service-box .service-list {
-  margin: 20px 0;
-  font-weight: bold;
-  color: #0f172a;
-}
-
-.service-box .brands, .service-box .location {
-  font-size: 15px;
-  color: #475569;
-  margin-top: 10px;
-}
-
-.service-box .cta {
-  margin-top: 30px;
-  text-align: center;
-}
-
+.service-box h2 { color: #0f172a; font-size: 28px; margin-bottom: 15px; }
+.service-box p { color: #334155; line-height: 1.7; font-size: 16px; margin-bottom: 15px; }
+.service-box .highlight { font-weight: bold; color: #0f172a; }
+.service-box .service-list { margin: 20px 0; font-weight: bold; color: #0f172a; }
+.service-box .brands, .service-box .location { font-size: 15px; color: #475569; margin-top: 10px; }
+.service-box .cta { margin-top: 30px; text-align: center; }
 .service-box .cta a {
   display: inline-block;
   padding: 15px 32px;
@@ -215,31 +109,24 @@ body {
   font-size: 17px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.service-box .cta a:hover {
-  transform: scale(1.06);
-  box-shadow: 0 15px 30px rgba(34,197,94,0.45);
-}
+.service-box .cta a:hover { transform: scale(1.06); box-shadow: 0 15px 30px rgba(34,197,94,0.45); }
 
 /* ANIMAÇÃO */
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 28px; }
-  .hero p { font-size: 16px; }
-  .hero img { max-width: 130px; }
-  .hero .buttons a { width: 100%; max-width: 320px; text-align: center; }
-
-  .conf { padding: 30px 15px; }
-  .cards { grid-template-columns: 1fr; padding: 30px 15px; }
-  .card { width: 100%; max-width: 320px; margin: 0 auto; }
-  .service-box { padding: 30px 15px; }
+@media(max-width:768px){
+.hero h1{font-size:28px;}
+.hero p{font-size:16px;}
+.hero img{max-width:130px;}
+.hero .buttons a{width:100%;max-width:320px;text-align:center;}
+.conf{padding:30px 15px;}
+.cards{grid-template-columns:1fr;padding:30px 15px;}
+.card{width:100%;max-width:320px;margin:0 auto;}
+.service-box{padding:30px 15px;}
 }
 </style>
-
+</head>
 <body>
 
 <!-- HERO -->
