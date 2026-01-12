@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alebrasmaq Assistência Técnica</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+}
+
+/* HEADER / HERO */
+.hero {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.hero img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.hero a {
+  display: inline-block;
+  padding: 16px 36px;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: bold;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(34,197,94,0.4);
+}
+
+/* CARDS DE SERVIÇOS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.card p {
+  color: #475569;
+  font-size: 15px;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero img {
+    max-width: 80px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER / HERO -->
+<section class="hero">
+  <img src="https://drive.google.com/thumbnail?id=1eeoMz_8VUucNl4q3JEgfDs_sDmvEJses&sz=w1000" alt="Alebrasmaq">
+  <h1>Manutenção de Linha Branca</h1>
+  <p>
+    Conserto profissional de geladeiras, máquinas de lavar, lava e seca e micro-ondas.
+    Atendimento rápido e confiável.
+  </p>
+  <a href="https://wa.me/5511987790889" target="_blank">Atendimento pelo WhatsApp</a>
+</section>
+
+<!-- CARDS DE SERVIÇOS -->
+<section class="cards">
+  <div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1sR1m7GWnfrBTSCXNEgHTfTJ5X1Gl-b34&sz=w1000" alt="Lava e Seca">
+    <h3>Lava e Seca</h3>
+    <p>Diagnóstico preciso e reparo profissional.</p>
+  </div>
+  <div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1_G-8-__5UPmqpYr74jQSHNi5qn_fEeYR&sz=w1000" alt="Micro-ondas">
+    <h3>Micro-ondas</h3>
+    <p>Conserto especializado e manutenção preventiva.</p>
+  </div>
+  <div class="card">
+    <img src="https://drive.google.com/thumbnail?id=1MvS6mayBNeNhqIsZ2EN86ntSAB4KaM2H&sz=w1000" alt="Geladeira">
+    <h3>Geladeira</h3>
+    <p>Refrigeração eficiente e troca de componentes.</p>
+  </div>
+  <div class="card">
+    <img src="https://drive.google.com/thumbnail?id=19XDpP1q5vilIVl9iHTZYElJ1Fvkinaoz&sz=w1000" alt="Máquina de Lavar">
+    <h3>Máquina de Lavar</h3>
+    <p>Problemas de centrifugação, vazamento e não liga.</p>
+  </div>
+</section>
+
+</body>
+</html>
