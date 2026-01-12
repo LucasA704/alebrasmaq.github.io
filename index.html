@@ -6,6 +6,7 @@
 <title>Alebrasmaq Assistência Técnica</title>
 
 <style>
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -17,17 +18,20 @@ body {
   background: #f1f5f9;
 }
 
-/* HEADER / HERO */
+/* HERO / HEADER */
 .hero {
   background: linear-gradient(135deg, #020617, #0f172a);
   color: white;
   padding: 70px 20px;
   text-align: center;
   border-radius: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
 .hero img {
-  max-width: 120px;
+  max-width: 160px;
   width: 100%;
   height: auto;
   display: block;
@@ -35,7 +39,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 38px;
   margin-bottom: 15px;
 }
 
@@ -46,11 +50,16 @@ body {
   opacity: 0.9;
 }
 
+.hero .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .hero a {
   display: inline-block;
-  padding: 16px 36px;
-  background: #22c55e;
-  color: #022c22;
+  padding: 16px 34px;
   font-weight: bold;
   border-radius: 999px;
   text-decoration: none;
@@ -58,16 +67,56 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(34,197,94,0.4);
+.hero .btn-whatsapp {
+  background: #22c55e;
+  color: #022c22;
+}
+
+.hero .btn-whatsapp:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(34,197,94,0.45);
+}
+
+.hero .btn-instagram {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.hero .btn-instagram:hover {
+  transform: scale(1.07);
+  box-shadow: 0 15px 30px rgba(255,255,255,0.35);
+}
+
+/* POR QUE ESCOLHER MEU SERVIÇO */
+.conf {
+  background: #f8fafc;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.conf h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-size: 28px;
+}
+
+.conf ul {
+  list-style: none;
+  padding: 0;
+}
+
+.conf li {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
 /* CARDS DE SERVIÇOS */
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   padding: 40px 20px;
 }
@@ -77,20 +126,21 @@ body {
   border-radius: 12px;
   padding: 25px;
   text-align: center;
-  width: 220px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.6s ease forwards;
 }
 
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
 
 .card img {
   width: 100%;
+  max-width: 140px;
   height: auto;
   margin-bottom: 15px;
 }
@@ -105,76 +155,151 @@ body {
   font-size: 15px;
 }
 
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* SEU ELETRODOMÉSTICO */
+.service-box {
+  background: #f8fafc;
+  padding: 40px 25px;
+  border-radius: 16px;
+  max-width: 950px;
+  margin: 50px auto;
+}
+
+.service-box h2 {
+  color: #0f172a;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.service-box p {
+  color: #334155;
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.service-box .highlight {
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.service-box .service-list {
+  margin: 20px 0;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.service-box .brands, .service-box .location {
+  font-size: 15px;
+  color: #475569;
+  margin-top: 10px;
+}
+
+.service-box .cta {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.service-box .cta a {
+  display: inline-block;
+  padding: 15px 32px;
+  background: #22c55e;
+  color: #022c22;
+  font-weight: bold;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box .cta a:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 30px rgba(34,197,94,0.45);
+}
+
+/* ANIMAÇÃO */
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  .hero img {
-    max-width: 80px;
-  }
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 16px; }
+  .hero img { max-width: 130px; }
+  .hero .buttons a { width: 100%; max-width: 320px; text-align: center; }
 
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
+  .conf { padding: 30px 15px; }
+  .cards { grid-template-columns: 1fr; padding: 30px 15px; }
+  .card { width: 100%; max-width: 320px; margin: 0 auto; }
+  .service-box { padding: 30px 15px; }
 }
 </style>
 
-</head>
 <body>
 
-<!-- HEADER / HERO -->
+<!-- HERO -->
 <section class="hero">
-  <img src="https://drive.google.com/thumbnail?id=1eeoMz_8VUucNl4q3JEgfDs_sDmvEJses&sz=w1000" alt="Alebrasmaq">
+  <img src="https://drive.google.com/uc?export=view&id=1eeoMz_8VUucNl4q3JEgfDs_sDmvEJses" alt="Alebrasmaq">
   <h1>Manutenção de Linha Branca</h1>
-  <p>
-    Conserto profissional de geladeiras, máquinas de lavar, lava e seca e micro-ondas.
-    Atendimento rápido e confiável.
-  </p>
-  <a href="https://wa.me/5511987790889" target="_blank">Atendimento pelo WhatsApp</a>
+  <p>Conserto profissional de geladeiras, máquinas de lavar, lava e seca e freezer.<br>Atendimento rápido, honesto e de confiança.</p>
+  <div class="buttons">
+    <a class="btn-whatsapp" href="https://wa.me/5511987790889" target="_blank">Solicitar atendimento no WhatsApp</a>
+    <a class="btn-instagram" href="https://www.instagram.com/alebrasmaqassistenciatecnica/" target="_blank">Veja nossos serviços no Instagram</a>
+  </div>
+</section>
+
+<!-- POR QUE ESCOLHER -->
+<section class="conf">
+  <h2>Por que escolher meu serviço?</h2>
+  <ul>
+    <li>✔️ Atendimento rápido</li>
+    <li>✔️ Experiência em linha branca</li>
+    <li>✔️ Orçamento transparente</li>
+    <li>✔️ Atendimento por indicação e confiança</li>
+  </ul>
 </section>
 
 <!-- CARDS DE SERVIÇOS -->
 <section class="cards">
   <div class="card">
-    <img src="https://drive.google.com/thumbnail?id=1sR1m7GWnfrBTSCXNEgHTfTJ5X1Gl-b34&sz=w1000" alt="Lava e Seca">
+    <img src="https://drive.google.com/uc?export=view&id=19XDpP1q5vilIVl9iHTZYElJ1Fvkinaoz" alt="Lava e Seca">
     <h3>Lava e Seca</h3>
     <p>Diagnóstico preciso e reparo profissional.</p>
   </div>
   <div class="card">
-    <img src="https://drive.google.com/thumbnail?id=1_G-8-__5UPmqpYr74jQSHNi5qn_fEeYR&sz=w1000" alt="Micro-ondas">
+    <img src="https://drive.google.com/uc?export=view&id=1_G-8-__5UPmqpYr74jQSHNi5qn_fEeYR" alt="Micro-ondas">
     <h3>Micro-ondas</h3>
-    <p>Conserto especializado e manutenção preventiva.</p>
+    <p>Reparo seguro e manutenção especializada.</p>
   </div>
   <div class="card">
-    <img src="https://drive.google.com/thumbnail?id=1MvS6mayBNeNhqIsZ2EN86ntSAB4KaM2H&sz=w1000" alt="Geladeira">
+    <img src="https://drive.google.com/uc?export=view&id=1MvS6mayBNeNhqIsZ2EN86ntSAB4KaM2H" alt="Geladeira">
     <h3>Geladeira</h3>
-    <p>Refrigeração eficiente e troca de componentes.</p>
+    <p>Conserto e manutenção preventiva para melhor desempenho.</p>
   </div>
   <div class="card">
-    <img src="https://drive.google.com/thumbnail?id=19XDpP1q5vilIVl9iHTZYElJ1Fvkinaoz&sz=w1000" alt="Máquina de Lavar">
-    <h3>Máquina de Lavar</h3>
+    <img src="https://drive.google.com/uc?export=view&id=1sR1m7GWnfrBTSCXNEgHTfTJ5X1Gl-b34" alt="Lavadora">
+    <h3>Lavadora</h3>
     <p>Problemas de centrifugação, vazamento e não liga.</p>
+  </div>
+</section>
+
+<!-- SEU ELETRODOMÉSTICO -->
+<section class="service-box">
+  <h2>Seu eletrodoméstico apresentou algum desses problemas?</h2>
+  <p>Então é sinal de que ele precisa de <span class="highlight">manutenção imediata</span>.</p>
+  <p>A <span class="highlight">Alebrasmaq</span> realiza diagnósticos completos, conserto especializado e manutenção preventiva em geladeiras, máquinas de lavar, lava e seca, micro-ondas e outros equipamentos de linha branca.</p>
+  <p class="service-list">Máquinas de lavar • Geladeiras • Micro-ondas</p>
+  <p class="brands">Assistência técnica especializada em <strong>Brastemp, Electrolux e Consul</strong>.<br>Demais marcas sob consulta.</p>
+  <p class="location">Atendimento na <strong>Zona Leste</strong> e <strong>ABC Paulista</strong>.</p>
+  <div class="cta">
+    <a href="https://wa.me/5511987790889" target="_blank">📲 Atendimento pelo WhatsApp</a>
   </div>
 </section>
 
 </body>
 </html>
-
