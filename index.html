@@ -4,119 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>Alebrasmaq | Manutenção de Linha Branca</title>
-  <meta name="description" content="Manutenção de linha branca especializada em geladeiras, máquinas de lavar e fogões. Atendimento rápido e confiável.">
+  <title>Alebrasmaq</title>
 
   <style>
-    /* ======= GLOBAL ======= */
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #f8fafc;
       color: #0f172a;
-      line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ======= HEADER ======= */
     header {
       background: #0f172a;
-      color: #ffffff;
+      color: white;
+      text-align: center;
       padding: 20px;
-      text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    header p {
-      margin-top: 8px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    /* ======= HERO ======= */
-    .hero {
-      background: #e5e7eb;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .btn-whatsapp {
-      display: inline-block;
-      background: #22c55e;
-      color: #ffffff;
-      padding: 14px 24px;
-      border-radius: 6px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    /* ======= CONTAINER ======= */
-    .container {
+    section {
+      padding: 30px 20px;
       max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
     }
 
-    /* ======= SERVICES ======= */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .servicos {
+      display: flex;
       gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .card {
-      background: #ffffff;
-      padding: 20px;
+      background: white;
+      width: 300px;
+      padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
+    .card img {
+      width: 100%;
+      border-radius: 6px;
     }
 
-    /* ======= ABOUT ======= */
-    .about {
-      background: #f1f5f9;
-      padding: 40px 20px;
-      text-align: center;
+    .whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      background: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    .about p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 17px;
-    }
-
-    /* ======= CONTACT ======= */
-    .contact {
-      text-align: center;
-    }
-
-    /* ======= FOOTER ======= */
     footer {
       background: #0f172a;
-      color: #ffffff;
+      color: white;
       text-align: center;
       padding: 15px;
       font-size: 14px;
@@ -126,79 +71,53 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- TOPO -->
   <header>
-    <h1>Alebrasmaq – Manutenção de Linha Branca</h1>
-    <p>Há mais de 30 anos cuidando do seu eletrodoméstico</p>
+    <h1>Alebrasmaq</h1>
+
+    <!-- 🔹 FRASE ADICIONADA (SEM MUDAR VISUAL) -->
+    <p>Há mais de 30 anos no ramo de manutenção de linha branca</p>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Assistência Técnica Especializada</h2>
-    <p>
-      Conserto e manutenção de geladeiras, máquinas de lavar e fogões
-      com rapidez e confiança.
-    </p>
-    <a 
-      class="btn-whatsapp" 
-      href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20orçamento%20para%20manutenção%20de%20linha%20branca"
-      target="_blank">
+  <!-- SERVIÇOS -->
+  <section>
+    <h2>Serviços</h2>
+
+    <div class="servicos">
+
+      <div class="card">
+        <img src="LINK_DA_IMAGEM_DA_GELADEIRA">
+        <h3>Geladeiras</h3>
+        <p>Conserto e manutenção.</p>
+      </div>
+
+      <div class="card">
+        <img src="LINK_DA_IMAGEM_DA_MAQUINA">
+        <h3>Máquinas de Lavar</h3>
+        <p>Reparos e troca de peças.</p>
+      </div>
+
+      <div class="card">
+        <img src="LINK_DA_IMAGEM_DO_FOGAO">
+        <h3>Fogões</h3>
+        <p>Manutenção especializada.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section style="text-align:center;">
+    <h2>Contato</h2>
+    <p>Entre em contato conosco pelo WhatsApp</p>
+
+    <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">
       Chamar no WhatsApp
     </a>
   </section>
 
-  <!-- SERVICES -->
-  <section class="container">
-    <h2 style="text-align:center; margin-bottom:30px;">Serviços</h2>
-
-    <div class="services">
-      <div class="card">
-        <h3>Geladeiras</h3>
-        <p>Conserto, manutenção preventiva e corretiva.</p>
-      </div>
-
-      <div class="card">
-        <h3>Máquinas de Lavar</h3>
-        <p>Reparos completos e troca de peças.</p>
-      </div>
-
-      <div class="card">
-        <h3>Fogões</h3>
-        <p>Manutenção segura e eficiente.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>Por que escolher a Alebrasmaq?</h2>
-    <p>
-      Somos especialistas em manutenção de linha branca,
-      oferecendo atendimento rápido, honesto e de qualidade.
-      Nosso compromisso é resolver seu problema com eficiência
-      e transparência.
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="container contact">
-    <h2>Contato</h2>
-    <p>
-      Precisa de assistência técnica?  
-      Entre em contato agora mesmo pelo WhatsApp.
-    </p>
-    <br>
-    <a 
-      class="btn-whatsapp" 
-      href="https://wa.me/5500000000000"
-      target="_blank">
-      Falar com a Alebrasmaq
-    </a>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    © 2026 Alebrasmaq – Manutenção de Linha Branca
+    © 2026 Alebrasmaq
   </footer>
 
 </body>
